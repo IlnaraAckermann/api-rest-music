@@ -25,5 +25,5 @@ data class Music(
     @Column( nullable = false)
     var tumbnailURL: String = "",
     @Column( nullable = false)
-    var album: String = ""
+    var albumId: Long = 0
 )
