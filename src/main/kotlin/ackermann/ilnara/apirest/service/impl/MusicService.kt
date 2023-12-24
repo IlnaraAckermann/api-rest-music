@@ -31,6 +31,6 @@ class MusicService(private val musicRepository: MusicRepository): IMusicService 
         this.musicRepository.findAllAlbumId()
 
     override fun findAllPhotosByAlbum(albumId: Long): List<MusicPhotosProjection> =
-        this.findAllPhotosByAlbum(albumId)
+        this.musicRepository.findAllPhotosByAlbumId(albumId)
 
 }
