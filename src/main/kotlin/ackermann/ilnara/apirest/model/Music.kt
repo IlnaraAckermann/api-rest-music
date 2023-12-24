@@ -22,8 +22,8 @@ data class Music(
     var title: String="",
     @Column( nullable = false)
     var url: String = "",
-    @Column( nullable = false)
+    @Column( name = "tumbnail_url",nullable = false)
     var tumbnailURL: String = "",
-    @Column( nullable = false)
+    @Column( name="album_id", nullable = false)
     var albumId: Long = 0
 )
