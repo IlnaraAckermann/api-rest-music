@@ -18,6 +18,12 @@ class MusicController(
     private val musicService: MusicService
 ) {
 
+    /**
+     * Endpoint para salvar músicas a partir de uma URL.
+     *
+     * @param url URL de onde as músicas serão obtidas.
+     * @return Resposta HTTP com a lista de músicas salvas.
+     */
     @PostMapping("/url")
     fun saveAllFromURL(@RequestParam url: String): ResponseEntity<List<Music>> {
         val musicList = this.musicService.saveAllFromURL(url)
@@ -26,6 +32,12 @@ class MusicController(
         )
     }
 
+    /**
+     * Endpoint para salvar uma lista de músicas a partir de uma requisição com formato JSON.
+     *
+     * @param musicList Lista de músicas a serem salvas.
+     * @return Resposta HTTP com a lista de músicas salvas.
+     */
     @PostMapping("/list")
     fun saveAllFromJson(@RequestBody musicList: List<Music>): ResponseEntity<List<Music>> {
         val savedMusicList = this.musicService.saveAll(musicList)
