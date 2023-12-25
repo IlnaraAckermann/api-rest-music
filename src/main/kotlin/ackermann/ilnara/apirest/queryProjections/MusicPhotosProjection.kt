@@ -2,5 +2,5 @@ package ackermann.ilnara.apirest.queryProjections
 
 interface MusicPhotosProjection {
     fun getUrl(): String
-    fun getThumbnailUrl(): String
+    fun getThumbnailURL(): String
 }
