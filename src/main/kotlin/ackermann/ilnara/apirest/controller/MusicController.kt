@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.*
 /**
  * Controlador para lidar com requisições relacionadas a álbuns.
  */
+
+@CrossOrigin(origins = ["http://localhost:3000/"])
 @RestController
 @RequestMapping("/api/music")
 class MusicController(
