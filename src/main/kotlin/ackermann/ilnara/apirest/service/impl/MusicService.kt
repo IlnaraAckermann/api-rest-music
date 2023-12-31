@@ -19,10 +19,7 @@ class MusicService(private val musicRepository: MusicRepository): IMusicService 
 
         val restTemplate = RestTemplate()
         val uri = URI.create(url)
-
         val response: Array<Music>? = restTemplate.getForObject(uri, Array<Music>::class.java)
-
-
       return   response?.toList()?.let { musicRepository.saveAll(it) } ?: emptyList()
     }
 
