@@ -35,7 +35,7 @@ class MusicController(
     fun saveAllFromURL(@RequestParam url: String): ResponseEntity<List<Music>> {
         val musicList = this.musicService.saveAllFromURL(url)
         return ResponseEntity(
-            (musicList), HttpStatus.OK
+            (musicList), HttpStatus.CREATED
         )
     }
 
@@ -50,7 +50,7 @@ class MusicController(
     fun saveAllFromJson(@RequestBody musicList: List<Music>): ResponseEntity<List<Music>> {
         val savedMusicList = this.musicService.saveAll(musicList)
         return ResponseEntity(
-            (savedMusicList), HttpStatus.OK
+            (savedMusicList), HttpStatus.CREATED
         )
     }
 
